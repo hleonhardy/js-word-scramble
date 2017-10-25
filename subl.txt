@@ -1,0 +1,27 @@
+let words = "hi joe shoes weird socks kangaroo tuple";
+let wordArr = words.split(' ');
+
+
+
+let nMax = Math.floor(wordArr.length - 1);
+let nMin = Math.ceil(0);
+
+let num1 = Math.floor(Math.random() * (nMax - nMin)) + nMin;
+let num2 = Math.floor(Math.random() * (nMax - nMin)) + nMin;
+
+
+let i = 0;
+let finalArr = [];
+
+for (let word of wordArr){
+    if (i === num1) {
+        finalArr.push(wordArr[num2]);
+    } else if (i === num2) {
+        finalArr.push(wordArr[num1]);
+    } else {
+        finalArr.push(word);
+    }
+    i += 1
+}
+
+
